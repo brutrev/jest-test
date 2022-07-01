@@ -1,6 +1,6 @@
 import { validateCpf } from '@/cpf-validator'
 
-describe('test-suite1', () => {
+describe('synchronous-test-suite', () => {
   it('test-case1', () => {
     expect(true).toBe(true)
   })
