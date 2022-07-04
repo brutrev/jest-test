@@ -14,6 +14,9 @@ export class Checkout {
   }
 
   public addItem(item: any): void {
+    if (!this.prices[item]) {
+      throw 'No price defined for item: ' + item
+    }
     if (!this.items[item]) {
       this.items[item] = 1
     } else {

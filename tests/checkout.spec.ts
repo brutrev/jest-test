@@ -27,4 +27,10 @@ describe('checkout test suite', () => {
     checkout.addItem('item1')
     expect(checkout.calculateTotal()).toBe(2)
   })
+
+  it('throws when item added with no price', () => {
+    expect(() => {
+      checkout.addItem('item3')
+    }).toThrow()
+  })
 })
